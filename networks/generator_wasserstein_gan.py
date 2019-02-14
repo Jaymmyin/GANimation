@@ -5,7 +5,7 @@ import torch
 
 class Generator(NetworkBase):
     """Generator. Encoder-Decoder Architecture."""
-    def __init__(self, conv_dim=64, c_dim=5, repeat_num=6):
+    def __init__(self, conv_dim=64, c_dim=2, repeat_num=6):
         super(Generator, self).__init__()
         self._name = 'generator_wgan'
 

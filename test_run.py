@@ -82,7 +82,7 @@ def find_epoch(model_path, load_epoch_num):
 def main():
     parser = argparse.ArgumentParser(description='input path to original image')
     parser.add_argument('--img_path', type=str, 
-                        default='/Users/xyli1905/Projects/Datasets/imgs_178/000009.png', 
+                        default='J:\\240\\project\test_set01', 
                         help='path to the test image')
     parser.add_argument('--model_path', type=str, default='./checkpoints/model_align/', 
                         help='path to the pretrained model')

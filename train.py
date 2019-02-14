@@ -14,6 +14,8 @@ class Train:
         data_loader_test = CustomDatasetDataLoader(self._opt, is_for_train=False)
 
         self._dataset_train = data_loader_train.load_data()
+        print ('*' * 100)
+        print (self._dataset_train)
         self._dataset_test = data_loader_test.load_data()
 
         self._dataset_train_size = len(data_loader_train)

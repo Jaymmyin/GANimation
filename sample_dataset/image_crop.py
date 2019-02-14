@@ -2,22 +2,22 @@ import cv2
 import numpy as np 
 import os
 import sys
-sys.path.insert(0, 'C:\\Files\\Course\\AI 240\\Proj\\GANimation-20190112\\utils')
+sys.path.insert(0, 'J:\\240\\project\\GANimation-20190112\\utils')
 import face_utils as face
 
 #modified by Jie Yin
 # input_image_path  = 'C:\\Files\\Course\\AI 240\\Proj\\wiki_crop\\'
 # output_image_path = 'C:\\Files\\Course\\AI 240\\Proj\\output_wiki_crop\\'
 input_path_list, output_path_list = [], []
-for i in range(24, 100):
+for i in range(50, 80):
     if i < 10:
-        input_image_path = 'C:\\Files\\Course\\AI 240\\Proj\\wiki_crop\\' + '0' + str(i) + '\\'
-        output_image_path = 'C:\\Files\\Course\\AI 240\\Proj\\output_wiki_crop\\' + '0' + str(i) + '\\'
+        input_image_path = 'J:\\240\\project\\wiki_crop\\' + '0' + str(i) + '\\'
+        output_image_path = 'J:\\240\\project\\out_wiki_crop\\' + '0' + str(i) + '\\'
         input_path_list.append(input_image_path)
         output_path_list.append(output_image_path)
     else:
-        input_image_path = 'C:\\Files\\Course\\AI 240\\Proj\\wiki_crop\\' + str(i) + '\\'
-        output_image_path = 'C:\\Files\\Course\\AI 240\\Proj\\output_wiki_crop\\' + str(i) + '\\'
+        input_image_path = 'J:\\240\\project\\wiki_crop\\' + str(i) + '\\'
+        output_image_path = 'J:\\240\\project\\out_wiki_crop\\' + str(i) + '\\'
         input_path_list.append(input_image_path)
         output_path_list.append(output_image_path)
 

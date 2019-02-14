@@ -1,0 +1,37 @@
+% FileData = load('J:\\240\\project\\GANimation-20190112\\sample_dataset\\wiki.mat');
+% csvwrite('J:\\240\\project\\GANimation-20190112\\sample_dataset\\wiki.csv', FileData.M);
+%clear
+%clc
+FileData = load('wiki.mat');
+x = FileData.wiki.dob;
+
+Dob = FileData.wiki.dob(i);
+Gender = FileData.wiki.gender(i);
+Photo_taken = FileData.wiki.photo_taken(i);
+Full_path = FileData.wiki.full_path;
+columns = {'Dob', 'Gender', 'Photo_taken'};
+temp_path = Full_path{1};
+data = table(Dob, Gender, Photo_taken, 'VariableNames', columns);
+
+curr_path = strsplit(temp_path, '.');
+curr_path2 = strsplit(curr_path{1}, '/');
+file_name = strcat(curr_path2{2}, '.csv');
+prefix = strcat(curr_path2, '_');%the prefix of the file name , number is the name of folder
+final_name = strcat();
+writetable(data, strcat('fuck/17/', file_name));
+% for i = 1:size(FileData.wiki.dob)
+%     Dob = FileData.wiki.dob(i);
+%     Gender = FileData.wiki.gender(i);
+%     Photo_taken = FileData.wiki.photo_taken(i);
+%     Full_path = FileData.wiki.full_path;
+%     columns = {'Dob', 'Gender', 'Photo_taken'};
+%     temp_path = Full_path{1};
+%     data = table(Dob, Gender, Photo_taken, 'VariableNames', columns);
+% 
+%     curr_path = strsplit(temp_path, '.');
+%     curr_path2 = strsplit(curr_path{1}, '/');
+%     file_name = strcat(curr_path2{2}, '.csv');
+%     prefix %the prefix of the file name , number is the name of folder
+%     writetable(data, strcat('fuck/17/', file_name));
+%  
+% end

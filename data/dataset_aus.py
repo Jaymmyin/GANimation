@@ -100,7 +100,7 @@ class AusDataset(DatasetBase):
 
     def _get_cond_by_id(self, id):
         if id in self._conds:
-            return self._conds[id]/5.0
+            return np.array([self._conds[id][0], self._conds[id][1]], dtype = np.float32)
         else:
             return None
 
@@ -113,5 +113,5 @@ class AusDataset(DatasetBase):
         while cond is None:
             rand_sample_id = self._ids[random.randint(0, self._dataset_size - 1)]
             cond = self._get_cond_by_id(rand_sample_id)
-            cond += np.random.uniform(-0.1, 0.1, cond.shape)
+            cond[0] += np.random.randint(-8, 8, cond[0].shape) # to do
         return cond
